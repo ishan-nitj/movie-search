@@ -1,0 +1,51 @@
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<link type="text/css" rel="stylesheet" href="{{ url_for('static',filename='CSS.css')}}"/>
+	<title>Movie details</title>
+	<meta name="viewport" content="initial-scale=1.0; maximum-scale=1.0; width=device-width;">
+</head>
+<body>
+<div class="table-title">
+<h3>{{obj['Title']}}({{obj['Year']}})</h3>
+</div>
+<table class="table-fill">
+<thead>
+<tr>
+<th class="text-left" colspan=2><img src={{ obj['Poster'] }}></th>
+</tr>
+</thead>
+<tbody class="table-hover">
+<tr>
+<td class="text-left">Release Date</td>
+<td class="text-left">{{obj['Released']}}</td>
+</tr>
+<tr>
+<td class="text-left">Plot</td>
+<td class="text-left">{{obj['Plot']}}</td>
+</tr>
+<tr>
+<td class="text-left">Runtime</td>
+<td class="text-left">{{obj['Runtime']}}</td>
+</tr>
+<tr>
+<td class="text-left">Genre</td>
+<td class="text-left">{{obj['Genre']}}</td>
+</tr>
+<tr>
+<td class="text-left">Cast</td>
+<td class="text-left">{{obj['Actors']}}</td>
+</tr>
+<tr>
+<td class="text-left">IMDB Rating</td>
+<td class="text-left">{{obj['imdbRating']}}</td>
+</tr>
+<tr>
+<td class="text-left">Director</td>
+<td class="text-left">{{obj['Director']}}</td>
+</tr>
+</tbody>
+</table>
+  
+
+  </body>
