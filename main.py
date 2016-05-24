@@ -1,5 +1,5 @@
 from flask import Flask,render_template,request
-from urllib.request import urlopen
+from urllib2 import urlopen
 import json
 
 app=Flask(__name__)
