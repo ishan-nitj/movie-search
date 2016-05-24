@@ -4,6 +4,10 @@ import json
 
 app=Flask(__name__)
 
+@app.route('/')
+def index():
+	return render_template('movie_form.html')
+
 @app.route('/movie',methods=['GET','POST'])  
 def movie():
     if request.method=='POST':
@@ -16,9 +20,9 @@ def movie():
         response = urlopen(url).read().decode('utf8')
         obj = json.loads(response)
         if obj['Response']=='False':
-            return render_template("not_found.htm")
+            return render_template("not_found.html")
         else:
-            return render_template("moviedetails.html",obj=obj)
+            return render_template("movie_details.html",obj=obj)
 
 if __name__=="__main__": 
     app.run(debug=True)
